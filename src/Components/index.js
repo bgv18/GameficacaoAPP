@@ -12,6 +12,7 @@ function DraggableImage({ source }) {
       onPanResponderMove: (event, gesture) => {
         // Move the image
         Animated.event([null, { dx: pan.x, dy: pan.y }])(event, gesture);
+        console.log('Valor Pan:', pan);
         setPanResponderEnabled(false);
       },
       onPanResponderRelease: (event, gesture) => {
@@ -44,14 +45,14 @@ function DraggableImage({ source }) {
 
 const styles = StyleSheet.create({
   imageContainer: {
-    position: 'absolute',
+    marginRight: 5
   },
   active: {
     zIndex: 2,
   },
   image: {
-    width: 100,
-    height: 100,
+    width: 95,
+    height: 95,
   },
 });
 

@@ -8,26 +8,26 @@ export default function HistoryScreen() {
     <View style={styles.container}>
       <View style={{ flexDirection: 'column', marginHorizontal: 40, marginTop: 20 }}>
         <View style={{ flexDirection: 'row', marginBottom: 20 }}>
-          <View style={{ backgroundColor: 'white', width: 180, height: 150, marginRight: 20, marginLeft: 15 }}>
-            <Text style={{ textAlign: 'center', marginTop: 60 }}>Cenario</Text>
+          <View style={{ backgroundColor: 'white', width: 180, height: 150, marginRight: 20, marginLeft: 15, borderStyle: 'solid', borderColor: 'black', borderWidth: 7 }}>
+            <Text style={{ textAlign: 'center', marginTop: 60 }}>CENÁRIO</Text>
           </View>
-          <View style={{ backgroundColor: 'white', width: 180, height: 150, marginRight: 20, marginLeft: 15 }}>
-            <Text style={{ textAlign: 'center', marginTop: 60 }}>Tema</Text>
+          <View style={{ backgroundColor: 'white', width: 180, height: 150, marginRight: 20, marginLeft: 15, borderStyle: 'solid', borderColor: 'black', borderWidth: 7}}>
+            <Text style={{ textAlign: 'center', marginTop: 60 }}>TEMA</Text>
           </View>
         </View>
         <View style={{ flexDirection: 'row' }}>
-          <View style={{ backgroundColor: 'white', width: 180, height: 150, marginRight: 20, marginLeft: 15 }}>
-            <Text style={{ textAlign: 'center', marginTop: 60 }}>Enredo</Text>
+          <View style={{ backgroundColor: 'white', width: 180, height: 150, marginRight: 20, marginLeft: 15, borderStyle: 'solid', borderColor: 'black', borderWidth: 7}}>
+            <Text style={{ textAlign: 'center', marginTop: 60 }}>ENREDO</Text>
           </View>
-          <View style={{ backgroundColor: 'white', width: 180, height: 150, marginRight: 20, marginLeft: 15}}>
-            <Text style={{ textAlign: 'center', marginTop: 60 }}>Resolucao</Text>
+          <View style={{ backgroundColor: 'white', width: 180, height: 150, marginRight: 20, marginLeft: 15, borderStyle: 'solid', borderColor: 'black', borderWidth: 7}}>
+            <Text style={{ textAlign: 'center', marginTop: 60 }}>RESOLUÇÃO</Text>
           </View>
         </View>
       </View>
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', marginHorizontal: 20, marginBottom: 20 }}>
+      <View style={{ display: 'flex', flexDirection: 'row', margin: 70 }}>
           <DraggableImage source={require('../../images/Tema.png')} />
           <DraggableImage source={require('../../images/Enredo.png')} />
-          <DraggableImage source={require('../../images/Imagem1.png')} />
+          <DraggableImage source={require('../../images/Cenario.png')} />
           <DraggableImage source={require('../../images/Resolucao.png')}/>
       </View>
     </View>
@@ -50,6 +50,8 @@ const styles = StyleSheet.create({
     height: 150,
     margin: 20,
     backgroundColor: 'white',
+    border: 1,
+    borderStyle: 'solid'
   },
   bottomRow: {
     flexDirection: 'row',

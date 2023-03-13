@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 
-import HistoryScreen from './src/Screens/HistoryScreens/index';
+import MyTabs from './src/Screens/HistoryMainPage/index';
 
 const Stack = createStackNavigator();
 
@@ -13,7 +13,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="GameficacaoAPP" component={TelaInicial} />
-        <Stack.Screen name="Historia" component={HistoryScreen} />
+        <Stack.Screen name="História" component={MyTabs} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -23,7 +23,7 @@ function TelaInicial() {
   const navigation = useNavigation();
 
   const handlePress = () => {
-    navigation.navigate('Historia');
+    navigation.navigate('História');
   };
 
   return (
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginBottom: 100,
     color: 'white'
   },
   button: {
