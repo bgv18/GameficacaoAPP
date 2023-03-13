@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import DraggableImage from '../../Components/index';
 
 export default function HistoryScreen() {
+  
   return (
     <View style={styles.container}>
       <View style={{ flexDirection: 'column', marginHorizontal: 40, marginTop: 20 }}>
@@ -25,10 +26,22 @@ export default function HistoryScreen() {
         </View>
       </View>
       <View style={{ display: 'flex', flexDirection: 'row', margin: 70 }}>
-          <DraggableImage source={require('../../images/Tema.png')} />
-          <DraggableImage source={require('../../images/Enredo.png')} />
-          <DraggableImage source={require('../../images/Cenario.png')} />
-          <DraggableImage source={require('../../images/Resolucao.png')}/>
+          <DraggableImage
+            source={ require('../../images/Tema.png') }
+            correctPosition = {{x: 39, y: -361}}
+          />
+          <DraggableImage
+            source={ require('../../images/Cenario.png') }
+            correctPosition = {{x: 39, y: -361}}
+          />
+           <DraggableImage
+            source={ require('../../images/Enredo.png') }
+            correctPosition = {{x: 39, y: -361}}
+          />
+           <DraggableImage
+            source={ require('../../images/Resolucao.png') }
+            correctPosition = {{x: 39, y: -361}}
+          />
       </View>
     </View>
   );
@@ -52,15 +65,5 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     border: 1,
     borderStyle: 'solid'
-  },
-  bottomRow: {
-    flexDirection: 'row',
-  },
-  bottomSquare: {
-    width: 90,
-    height: 90,
-    margin: 4,
-    backgroundColor: '#32CD32',
-    alignSelf: 'flex-end',
-  },
+  }
 });

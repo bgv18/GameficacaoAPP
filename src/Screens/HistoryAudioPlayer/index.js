@@ -1,18 +1,23 @@
-import { Text, View } from "react-native";
+import { Text, View, StyleSheet } from "react-native";
 import { TouchableOpacity } from 'react-native';
-import Sound from 'react-native-sound';
 import React, { useState } from 'react';
+
+import hitoria1 from '../../Audio/historia1.mp3'
+
+var Sound = require('react-native-sound');
+
+Sound.setCategory('Playback')
 
 export default function HistoryAudioPlayer() {
   const [sound, setSound] = useState(null);
 
   const playSound = () => {
-    const audioPath = require('../../Audio/historia1.mp3');
-    const newSound = new Sound(audioPath, null, (error) => {
+    const newSound = new Sound('historia1.mp3', null, (error) => {
       if (error) {
         console.log('Erro ao carregar o som', error);
         return;
       }
+      newSound.setVolume(1);
       newSound.play();
     });
     setSound(newSound);
@@ -20,9 +25,18 @@ export default function HistoryAudioPlayer() {
 
     return (
         <View style={{flex: 1, alignItems: 'center', backgroundColor: '#363636'}}>
-            <TouchableOpacity onPress={playSound} style={{margin: 100}}>
+            <TouchableOpacity onPress={playSound} style={styles.button}>
                 <Text style={{ color: 'white', fontSize: 30 }}>Pressione para ouvir a história</Text>
             </TouchableOpacity>
         </View>
     );
   }
+
+  const styles = StyleSheet.create({
+    button: {
+      backgroundColor: '#32CD32', // cor do botão verde
+      padding: 10,
+      borderRadius: 5,
+      margin: 95
+    }
+  });  
