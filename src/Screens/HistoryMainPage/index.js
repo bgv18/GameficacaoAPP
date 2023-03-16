@@ -1,6 +1,5 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import HistoryText from '../../Screens/HistoryText/index';
 import HistoryScreen from '../../Screens/HistoryScreens/index';
@@ -18,7 +17,6 @@ export default function MyTabs() {
         component={HistoryText}
         options={{
             tabBarLabel: 'Texto',
-            tabBarIcon: ({ color, size}) => (<MaterialCommunityIcons name="message-reply-text-outline" color={color} size={32} />),
         }} 
       />
       <Tab.Screen 
@@ -26,7 +24,6 @@ export default function MyTabs() {
         component={HistoryScreen}
         options={{
             tabBarLabel: 'História',
-            tabBarIcon: ({ color, size}) => (<MaterialCommunityIcons name="book-open-outline" color={color} size={32} />),
         }}  
         />
       <Tab.Screen 
@@ -34,7 +31,6 @@ export default function MyTabs() {
         component={HistoryAudioPlayer}
         options={{
             tabBarLabel: 'Áudio',
-            tabBarIcon: ({ color, size}) => (<MaterialCommunityIcons name="ear-hearing" color={color} size={32} />),
         }}  
       />
     </Tab.Navigator>

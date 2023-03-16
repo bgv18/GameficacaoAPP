@@ -25,23 +25,25 @@ export default function HistoryScreen() {
           </View>
         </View>
       </View>
-      <View style={{ display: 'flex', flexDirection: 'row', margin: 70 }}>
+      <View style={{ display: 'flex', flexDirection: 'row', margin: 6 }}>
           <DraggableImage
             source={ require('../../images/Tema.png') }
-            correctPosition = {{x: 39, y: -361}}
+            correctPosition = {{x: 186, y: -315}}
           />
           <DraggableImage
             source={ require('../../images/Cenario.png') }
-            correctPosition = {{x: 39, y: -361}}
-          />
+            correctPosition = {{x: -187, y: -315}}
+            />
+      </View>
+      <View style={{ display: 'flex', flexDirection: 'row', margin: 1 }}>
            <DraggableImage
             source={ require('../../images/Enredo.png') }
-            correctPosition = {{x: 39, y: -361}}
-          />
+            correctPosition = {{x: 27, y: -281}}
+            />
            <DraggableImage
             source={ require('../../images/Resolucao.png') }
-            correctPosition = {{x: 39, y: -361}}
-          />
+            correctPosition = {{x: 28, y: -282}}
+            />
       </View>
     </View>
   );
